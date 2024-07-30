@@ -16,7 +16,7 @@
 
         <section class="nav-container">
             <ul>
-                <li><a href="" class="nav-item">Home</a></li>
+                <li><a href="#home" class="nav-item">Home</a></li>
             </ul>
             <ul>
                 <li> <a href="" class="nav-item">Our Package</a></li>
@@ -24,12 +24,11 @@
             <ul>
                 <li> <a href="" class="nav-item">Call Me</a></li>
             </ul>
-
         </section>
     </nav>
 
     <main>
-        <article>
+        <article id="home">
             <header class="main-title">
                 <h1>Your Trust Travel Agent</h1>
             </header>
@@ -44,31 +43,37 @@
             </article>
 
             <section class="main-img">
-                <h5>"Liburan akan semakin menyenangkan bersaya <span>Travel</span> kami</h5>
+                <div class="quote">"Liburan akan semakin menyenangkan bersaya <span>Travel</span> kami</div>
                 <br>
-                <img src="assets/Foto.jpg" alt="Profile" class="img" width="50px" height="50px">
-
-                <p>lorem ipsum</p>
-                <p>lorem ipsum, 29</p>
+                <div class="profile">
+                    <img src="assets/Foto.jpg" alt="Profile" class="img" width="50px" height="50px">
+                    <div>
+                        <p class="name">Florence Hughes</p>
+                        <p class="designation">Ibu Rumah Tangga, 28</p>
+                    </div>
+                </div>
             </section>
 
-            <form class="form-content-item">
-                <h2>Contact Us</h2>
-                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+            <section class="form">
+                <form class="form-content-item">
+                    <h2>Contact Us</h2>
+                    <p class="main-contact">Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
 
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="interst">What are you interested in?</label><br>
-                <select id="interst">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Name" required><br>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <label for="interst">What are you interested in?</label><br>
+                    <select id="interst">
                     <option disable hidden selected>Select option</option>
                     <option value="turkie">TURKIE</option>
                     <option value="america">AMERIKA</option>
                     <option value="rusian">RUSIA</option>
                 </select>
-                <input type="submit" value="SEND">
-            </form>
+
+                    <input type="submit" value="SEND">
+                </form>
+            </section>
 
         </section>
     </main>

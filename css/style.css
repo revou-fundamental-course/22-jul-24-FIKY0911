@@ -1,15 +1,20 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: #fff;
     font-family: arial, 'sans-serif';
 }
 
 nav {
-    background-color: #fafafa;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     align-item: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    border: 1px solid rgba(0,0,0,.1);
 }
 
 .logo-icon {
@@ -57,13 +62,12 @@ a:hover {
 .main-title {
     text-align: center;
     font-size: 24px;
-    padding-top: 20px;
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 
 .main-content {
     padding: 20px;
-    background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
     margin-top: 20px;
@@ -72,15 +76,15 @@ a:hover {
 p {
     color: rgba(0,0,0,.5);
     text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .main-content-item {
     margin: auto;
     border: 1px solid rgba(0,0,0,.1);
+    padding: 10px;
     width: 25%;  
-    height: 250px;
+    height: 300px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 
@@ -88,8 +92,17 @@ p {
     width: 100%;
     height: 150px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 17px;
+}
+
+.quote {
+    display: inline-block;
+    font-size: 15px;
+    flex-direction: column;
+    margin-top: 0;
 }
 
 .img {
@@ -97,8 +110,32 @@ p {
     border-radius: 50%;
 }
 
-img > p {
-    text-align: left;
+.name {
+    font-weight: bold;
+}
+
+.designation {
+    color: #777;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: -17px;
+}
+
+.profil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.form {
+    padding-top: 50px;
+    background-color: #fafafa;
 }
 
 .form-content-item {
@@ -111,7 +148,11 @@ img > p {
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.main-contact {
+    margin-bottom: 50px
 }
 
 input {
@@ -119,8 +160,8 @@ input {
     margin: auto;
     width: 90%;
     height: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
 }
 
 select {
@@ -128,13 +169,13 @@ select {
     margin: 6px auto;
     width: 95%;
     height: 30px;
-    border-radius: 5px rgba(0,0,0,.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
 }
 
-input:active {
-    background-color: rgba(250, 250, 250, .1);
-    color: #fafafa;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+input:active,
+select:active {
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.3);
 }
 
 input[type="submit"] {
@@ -153,32 +194,4 @@ input[type="submit"]:hover {
     background-color: #fafafa;
     color: #0bf;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-}
-
-
-@media screen and (max-width: 600px) {
-    ul {
-        flex-direction: column;
-    }
-    
-    li {
-        margin-bottom: 10px;
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    nav.logo-icon {
-        margin-bottom: 10px;
-    }
-    
-    nav.nav-container {
-        padding-right: 0;
-    }
-    
-    nav.nav-item {
-        margin-bottom: 10px;
-    }
 }
