@@ -2,19 +2,18 @@
     padding: 0;
     margin: 0;
     background-color: #fff;
-    font-family: arial, 'sans-serif';
 }
 
 nav {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    align-item: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
     border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
 }
 
 .logo-icon {
@@ -37,10 +36,6 @@ ul {
 
 li {
     padding: 5px;
-}
-
-nav {
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
 }
 
 .nav-item {
@@ -246,4 +241,50 @@ p>span {
     font-size: 20px;
     color: red;
     padding-bottom: 25px;
+}
+
+/* Other styles... */
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .logo-icon {
+        margin-bottom: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 5px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .container-package {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 255, 255, 0.8);
+    }
+
+    input[type="submit"] {
+        display: flex;
+        background-color: #0bf;
+        color: #fafafa;
+        margin: 6px auto;
+        width: auto;
+        height: auto;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Other responsive styles... */
 }

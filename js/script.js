@@ -1,22 +1,15 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+// Ini Javascript function
 
-    // Perform form validation or processing here
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
+function formValidation() {
+    let name = document.getElementById('name').value;
+    console.log(name);
 
-    if (name === '' || email === '') {
-        alert('Please fill in all fields.');
-        return;
+    // Pengkondisian dimana nama tidak boleh ''
+    if (name === '') {
+        // Code ini akan dieksekusi ketika nama = ''
+        alert('Nama harus diisi!');
+    } else {
+        // Code ini akan dieksekusi ketika nama tidak ''
+        alert('Sukses mengimput');
     }
-
-    // Validate email format
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-    // If validation passes, perform any necessary actions
-    alert('Form submitted successfully!');
-});
+}
