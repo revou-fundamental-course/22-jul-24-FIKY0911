@@ -68,21 +68,26 @@ main {
     display: grid;
     align-content: space-between;
     border-radius: 10px;
-    padding-top: 20px;
-    margin:auto;
+    padding-top: 337px;
+    margin-left: 211px;
+    position: relative;
 }
 
 .slider {
     margin-top: 2px;
-    margin-left: 34px;
+    margin-left: 32px;
+    position: absolute;
     padding: 0;
 }
 
-.slider-img {
+.main-content .slider-img {
     width: 365px;
     height: 325px;
-    object-fit: cover;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+}
+
+.main-content .slider-img [data-show="hidden"] {
+    z-index: -1;
 }
 
 p {
@@ -114,7 +119,7 @@ p {
     top: 0;
     flex-direction: column;
     align-items: baseline;
-    margin-bottom: 50px;
+    margin-bottom: 168px;
 }
 
 .quote {
@@ -214,9 +219,7 @@ p {
     height: 435px;
     padding: 40px 60px;
     margin: auto;
-    color: #fafafa;
-    background-color:#00FFFf;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    background-color: #808080;
 }
 
 h2 {
@@ -258,7 +261,7 @@ input[type="submit"] {
     margin: 6px auto;
     width: 97%;
     height: 30px;
-    border: none;
+    text-align: center;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
