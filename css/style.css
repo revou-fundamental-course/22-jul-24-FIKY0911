@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #fff;
 }
 
 nav {
@@ -9,19 +8,18 @@ nav {
     align-items: baseline;
     justify-content: space-between;
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    margin: auto;
+    padding: 0 10px 0 10px;
     z-index: 999;
+    background-color: #ffff;
     border: 1px solid rgba(0,0,0,.1);
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
 }
 
 .logo-icon {
     font-family: "Times New Roman", Times, serif;
-    padding: 10px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .nav-container {
@@ -30,7 +28,7 @@ nav {
 }
 
 ul {
-    padding-top: 15px;
+    padding: 15px;
     list-style-type: none;
 }
 
@@ -39,7 +37,7 @@ li {
 }
 
 .nav-item {
-    padding: 8px 12px;
+    padding: 6px 12px;
     text-decoration: none;
     background-color: #0bf;
     color: #fafafa;
@@ -54,6 +52,10 @@ a:hover {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 
+main {
+    backgroud-color:#F5F5DC
+}
+
 .main-title {
     text-align: center;
     font-size: 24px;
@@ -62,10 +64,25 @@ a:hover {
 }
 
 .main-content {
-    padding: 20px;
+    grid-area: main-content;
+    display: grid;
+    align-content: space-between;
     border-radius: 10px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-    margin-top: 20px;
+    padding-top: 20px;
+    margin:auto;
+}
+
+.slider {
+    margin-top: 2px;
+    margin-left: 34px;
+    padding: 0;
+}
+
+.slider-img {
+    width: 365px;
+    height: 325px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
 }
 
 p {
@@ -75,7 +92,6 @@ p {
 }
 
 .main-content-item {
-    margin: auto;
     border: 1px solid rgba(0,0,0,.1);
     padding: 10px;
     width: 25%;  
@@ -83,50 +99,73 @@ p {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'main-content form'
+    'main-img features';
+}
+
 .main-img {
-    width: 100%;
     height: 150px;
     display: flex;
+    top: 0;
     flex-direction: column;
-    align-items: center;
-    margin: auto;
-    padding-top: 17px;
+    align-items: baseline;
     margin-bottom: 50px;
 }
 
 .quote {
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 15px;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: 15px;
 }
 
 .img {
     align-items: center;
     border-radius: 50%;
+    position: relative;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 .name {
+    font-size: 19px;
+    padding-bottom: 5px;
     font-weight: bold;
 }
 
 .designation {
-    color: #777;
-    margin-right: 5px;
+    color: #777;    
     font-size: 14px;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    margin-top: -17px;
+    padding-left: 66px;
+    margin-left: 30px;
+
 }
 
 .profil img {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .article-package {
@@ -166,16 +205,17 @@ p {
 }
 
 .form {
-    padding-top: 100px;
-    padding-bottom: 80px;
-    background-color: #fafafa;
+    grid-area: form;
+    padding-top: 20px;
 }
 
 .form-content-item {
-    width: 25%;
-    height: 400px;
+    width: 48%;
+    height: 435px;
     padding: 40px 60px;
     margin: auto;
+    color: #fafafa;
+    background-color:#00FFFf;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
 
@@ -185,6 +225,7 @@ h2 {
 }
 
 .main-contact {
+    color: #fff;
     margin-bottom: 50px
 }
 
@@ -237,54 +278,13 @@ input[type="submit"]:hover {
     padding-bottom: 50px;
 }
 
-p>span {
+p{
     font-size: 20px;
-    color: red;
     padding-bottom: 25px;
 }
 
-/* Other styles... */
-
-/* Responsive styles for screens smaller than 768px */
-@media (max-width: 767px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-container {
-        flex-direction: column;
-    }
-
-    .logo-icon {
-        margin-bottom: 10px;
-    }
-
-    .nav-item {
-        margin-bottom: 5px;
-    }
-
-    .main-content {
-        width: 100%;
-    }
-
-    .container-package {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 255, 255, 0.8);
-    }
-
-    input[type="submit"] {
-        display: flex;
-        background-color: #0bf;
-        color: #fafafa;
-        margin: 6px auto;
-        width: auto;
-        height: auto;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    /* Other responsive styles... */
+span {
+    font-size: 50px;
+    padding-left: 2px;
+    color: red;
 }
